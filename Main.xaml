@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="496,491" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:b="clr-namespace:BznUiPath;assembly=BznUiPath" xmlns:ba="clr-namespace:BznUiPath.Activities;assembly=BznUiPath.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1792,841" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:b="clr-namespace:BznUiPath;assembly=BznUiPath" xmlns:ba="clr-namespace:BznUiPath.Activities;assembly=BznUiPath.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
       <x:String>System.Activities</x:String>
@@ -50,6 +50,8 @@
       <AssemblyReference>BznUiPath.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bzn Custom Activity" sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -73,8 +75,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ba:BuscaCep Cep="09541001" DisplayName="Busca cep" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="BuscaCep_1" Result="[addr]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;CEP: &quot; + addr.cep + vbCrLf +&#xA;                   addr.logradouro +&#xA;                   &quot; &quot; + addr.complemento + vbCrLf +&#xA;                   addr.localidade + &quot; - &quot; + addr.bairro +&#xA;                   &quot; - &quot; + addr.uf]" />
+            <ba:BuscaCep Cep="04794000" DisplayName="Busca cep" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="BuscaCep_1" Result="[addr]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;CEP: &quot; + addr.cep + vbCrLf +&#xD;&#xA;                   addr.logradouro +&#xD;&#xA;                   &quot; &quot; + addr.complemento + vbCrLf +&#xD;&#xA;                   addr.localidade + &quot; - &quot; + addr.bairro +&#xD;&#xA;                   &quot; - &quot; + addr.uf]" />
           </Sequence>
         </ActivityAction>
       </ba:ParentScope.Body>
