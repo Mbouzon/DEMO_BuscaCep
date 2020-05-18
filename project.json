@@ -1,6 +1,6 @@
 {
   "name": "DEMO_BuscaCep",
-  "description": "Teste da atividade BuscaCep do BznUiPath activity package",
+  "description": "Demonstração utilizando o componente BuscaCep que a partir de um código postal(CEP) recupera os dados de endereçamento",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[20.4.0]",
